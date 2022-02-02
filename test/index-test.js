@@ -7,22 +7,7 @@ import Adapter from 'enzyme-adapter-react-16';
 
 Enzyme.configure({ adapter: new Adapter() })
 
-describe('OlderCoaster', () => {
-  let wrapper;
 
-  before(() => {
-    wrapper = shallow(React.createElement(OlderCoaster));
-  });
-
-  it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<OlderCoaster />, div);
-  });
-
-  it('should have the right DOM markup', () => {
-    expect(wrapper.html()).to.equal(`<div class="oldercoaster"><p>Two grannies having the time of their life!</p><p>Passengers:</p><ul><li>Agnes</li><li>Muriel</li></ul></div>`);
-  });
-});
 
 describe('InFrontOfYou', () => {
   let wrapper;
