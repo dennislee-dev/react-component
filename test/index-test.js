@@ -24,7 +24,22 @@ describe('OlderCoaster', () => {
   });
 });
 
+describe('InFrontOfYou', () => {
+  let wrapper;
 
+  before(() => {
+    wrapper = shallow(React.createElement(InFrontOfYou));
+  });
+
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<InFrontOfYou />, div);
+  });
+
+  it('should have the right DOM markup', () => {
+    expect(wrapper.html()).to.equal(`<div><p>You shouldn&#x27;t look too far.</p><p>Sometimes, the solution is right in front of you.</p></div>`);
+  });
+});
 
 describe('ButcherShop', () => {
   let wrapper;
